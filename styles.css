@@ -1,10 +1,14 @@
+*, *::before, *::after{
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
 .buttons{
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap:10px;
-    
-    
+    gap:10px;   
 }
 .container{
     display:flex;
@@ -14,9 +18,11 @@
     height:600px;
     background-color: grey;
     width: 375px;
-    margin: auto auto;
+    margin: 100px auto;
     border: 1px solid black;
     border-radius: 10px;
+
+    
 }
 .display{
     background-color: rgb(236, 236, 236);
@@ -26,6 +32,22 @@
     border-radius: 10px;
     outline:none;
     border:1px solid black;
+    grid-column: 1 / -1;
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding:10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.display .previous-operand{
+    color: rbga(0,0,0,0.75);
+    font-size: 1.25rem;
+}
+.display .current-operand{
+    color: rbga(0,0,0,1);
+    font-size: 2.5rem;
 }
 .number, .operator{
     font-size: 18px;
